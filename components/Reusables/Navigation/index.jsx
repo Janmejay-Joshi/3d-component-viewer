@@ -10,7 +10,13 @@ const Navigation = () => {
   return (
     <>
       <div className={`${styles.sidebar} ${sideBar ? styles.visible : null}`}>
-        <h2 className={styles.heading}>3D Viewer</h2>
+        <h2
+          className={styles.heading}
+          onClick={() => { setSideBar(!sideBar) }}
+        >3D Viewer</h2>
+        <Link href="/" passHref>
+          <span>Home</span>
+        </Link>
         <Link href="/arduino" passHref>
           <span>Arduino</span>
         </Link>
@@ -25,7 +31,7 @@ const Navigation = () => {
           onClick={() => { setSideBar(!sideBar) }}
           style={sideBar ? {
             transition: "all 1s ease-in-out",
-            transform: "translateX(22vw)"
+            transform: "translateX(16vw)"
           } : {
             transition: "all 1s ease-in-out",
           }}

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
 import Navigation from "../components/Reusables/Navigation"
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -15,6 +16,28 @@ export default function Home() {
       <Navigation />
       <main className={styles.main}>
         <div className={styles.list}>
+          {/* {["Arduino", "Ultrasonic", "More Comming Soon..."].map((model, index) => { */}
+          {/*   return ( */}
+          {/*     <div className={styles.card} key={`${index}`}> */}
+          {/*       {model} */}
+          {/*     </div> */}
+          {/*   ) */}
+          {/* })} */}
+          <Link href="/arduino" passHref>
+            <div className={styles.card} >
+              {"Arduino"}
+            </div>
+          </Link>
+          <Link href="/ultrasonic_sensor" passHref>
+            <div className={styles.card} >
+              {"Ultrasonic Sensor"}
+            </div>
+          </Link>
+          <Link href="/" passHref>
+            <div className={styles.card} >
+              {"More Comming Soon..."}
+            </div>
+          </Link>
         </div>
       </main>
     </>

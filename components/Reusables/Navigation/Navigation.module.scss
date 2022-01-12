@@ -25,7 +25,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0 2rem;
+    margin: 0;
     transition: all 1s ease-in-out;
 
     h2{
@@ -38,6 +38,15 @@
       border-radius: 50%;
       font-size: 2.5rem;
       color: #EEE;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+      h2 {
+        height: 2.5rem;
+        width: 2.5rem;
+      font-size: 1.5rem;
+      }
 
     }
   }
@@ -58,6 +67,10 @@
     animation-iteration-count: 2;
   }
   
+    @media only screen and (max-width: 600px) {
+      font-size: 1.25rem;
+      margin-left: 0.5rem;
+}
 }
 
 @keyframes waviy {
@@ -73,7 +86,7 @@
 
 .sidebar{
   height: 100vh;
-  min-width: 21vw;
+  min-width: 15vw;
 
   z-index: 100;
 
@@ -100,6 +113,9 @@
     margin: 0;
     font-size: 2rem;
     background: #212121;
+    @media only screen and (max-width: 600px) {
+      font-size: 1.25rem;
+  }
   }
 
   span{
@@ -116,6 +132,9 @@
       background: #fff;
     font-weight: bold;
     }
+    @media only screen and (max-width: 600px) {
+      font-size: 1rem;
+  }
   }
 
 }
